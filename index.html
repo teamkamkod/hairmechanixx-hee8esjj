@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAIRMECHANIXX | Barber Shop in Lodi Colony, New Delhi</title>
+<meta name="description" content="HAIRMECHANIXX — 5.0-rated barber shop at Meharchand Market, Lodi Colony, New Delhi. Open daily 10 AM–8 PM. Call +91 74001 35555.">
+<meta name="keywords" content="barber shop New Delhi, men's haircut Delhi, beard trim New Delhi, fade haircut near me, hot towel shave Delhi, best barber Delhi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0E0E0E;
+    --secondary: #C9A227;
+    --background: #121212;
+    --text: #F5F0E6;
+    --cta: #C9A227;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Karla', sans-serif;
+    --radius: 0;
+    --transition: 0.4s ease;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  .cta {
+    display: inline-block;
+    background: var(--cta);
+    color: #0E0E0E;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition), transform 0.2s;
+    border-radius: var(--radius);
+    text-align: center;
+  }
+
+  .cta:hover {
+    background: #e8b82e;
+    transform: translateY(-2px);
+  }
+
+  .cta-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 13px 32px;
+    border: 1px solid var(--secondary);
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition);
+    border-radius: var(--radius);
+  }
+
+  .cta-outline:hover {
+    background: var(--secondary);
+    color: #0E0E0E;
+  }
+
+  section { padding: 80px 20px; }
+
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-heading {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .section-text {
+    color: rgba(245,240,230,0.72);
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .gold-line {
+    width: 48px;
+    height: 2px;
+    background: var(--secondary);
+    margin-bottom: 24px;
+  }
+
+  /* ─── FADE-IN ANIMATION ─── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── CORNER FRAME ─── */
+  .corner-frame {
+    position: relative;
+    display: block;
+  }
+  .corner-frame::before,
+  .corner-frame::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-color: var(--secondary);
+    border-style: solid;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .corner-frame::before {
+    top: 10px;
+    left: 10px;
+    border-width: 2px 0 0 2px;
+  }
+  .corner-frame::after {
+    bottom: 10px;
+    right: 10px;
+    border-width: 0 2px 2px 0;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 28px;
+    background: rgba(14,14,14,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,162,39,0.15);
+    transition: background 0.3s;
+  }
+
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: var(--secondary);
+    text-transform: uppercase;
+  }
+
+  .nav-logo span {
+    color: var(--text);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  nav ul li a {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245,240,230,0.8);
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover { color: var(--secondary); }
+
+  .nav-cta-wrap { display: flex; align-items: center; gap: 16px; }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.active span:nth-child(2) { opacity: 0; }
+  .burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 767px) {
+    .burger { display: flex; }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(14,14,14,0.98);
+      padding: 24px 28px;
+      gap: 20px;
+      border-bottom: 1px solid rgba(201,162,39,0.2);
+    }
+
+    nav ul.open { display: flex; }
+
+    nav ul li a { font-size: 0.9rem; }
+
+    .nav-cta-wrap .cta { display: none; }
+  }
+
+  @media (min-width: 768px) {
+    nav ul { display: flex !important; }
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(14,14,14,0.92) 0%, rgba(14,14,14,0.65) 55%, rgba(14,14,14,0.2) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 28px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    margin-left: 5vw;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 16px;
+  }
+
+  .hero-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .hero-subheading {
+    font-family: var(--font-heading);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--secondary);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    color: rgba(245,240,230,0.78);
+    max-width: 480px;
+    margin-bottom: 36px;
+    line-height: 1.8;
+  }
+
+  .hero-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+
+  .hero-stars { color: var(--secondary); font-size: 1rem; letter-spacing: 2px; }
+
+  .hero-rating-text {
+    font-size: 0.82rem;
+    color: rgba(245,240,230,0.65);
+    letter-spacing: 0.08em;
+  }
+
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* ─── ABOUT ─── */
+  #about {
+    background: #0E0E0E;
+    padding: 80px 20px;
+  }
+
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .about-image-wrap {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+  }
+
+  .about-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.85);
+  }
+
+  .about-text-wrap { }
+
+  .about-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--secondary);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,240,230,0.55);
+    margin-top: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .about-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-image-wrap { height: 460px; }
+  }
+
+  /* ─── FEATURED MENU / SERVICES ─── */
+  #services {
+    background: var(--background);
+    padding: 80px 20px;
+  }
+
+  .services-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .services-header {
+    margin-bottom: 48px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .service-card {
+    background: #1a1a1a;
+    padding: 36px 32px;
+    border-left: 2px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(201,162,39,0.04);
+    transition: width 0.4s;
+  }
+
+  .service-card:hover::before { width: 100%; }
+  .service-card:hover { border-left-color: var(--secondary); }
+
+  .service-icon {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .service-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+    color: rgba(245,240,230,0.6);
+    line-height: 1.7;
+  }
+
+  .services-cta {
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .services-note {
+    font-size: 0.85rem;
+    color: rgba(245,240,230,0.5);
+    margin-top: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ─── REVIEWS ─── */
+  #avis {
+    background: #0E0E0E;
+    padding: 80px 20px;
+  }
+
+  .reviews-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .reviews-header { margin-bottom: 48px; }
+
+  .reviews-aggregate {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 24px 28px;
+    background: #1a1a1a;
+    border-left: 2px solid var(--secondary);
+    max-width: 420px;
+  }
+
+  .agg-score {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--secondary);
+    line-height: 1;
+  }
+
+  .agg-details { display: flex; flex-direction: column; gap: 4px; }
+
+  .agg-stars { color: var(--secondary); font-size: 1.1rem; letter-spacing: 3px; }
+
+  .agg-count {
+    font-size: 0.8rem;
+    color: rgba(245,240,230,0.55);
+    letter-spacing: 0.1em;
+  }
+
+  .no-reviews-note {
+    margin-top: 32px;
+    padding: 32px;
+    background: #1a1a1a;
+    border-left: 2px solid rgba(201,162,39,0.3);
+    max-width: 560px;
+  }
+
+  .no-reviews-note p {
+    color: rgba(245,240,230,0.65);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .no-reviews-note strong {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── GALLERY ─── */
+  #galerie {
+    background: var(--background);
+    padding: 80px 20px;
+  }
+
+  .gallery-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .gallery-header { margin-bottom: 40px; }
+
+  .carousel-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc(100% - 0px);
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.88);
+    transition: filter 0.4s, transform 0.6s;
+  }
+
+  .carousel-slide:hover img {
+    filter: brightness(1);
+    transform: scale(1.03);
+  }
+
+  .carousel-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    justify-content: center;
+  }
+
+  .carousel-btn {
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .carousel-btn:hover {
+    background: var(--secondary);
+    color: #0E0E0E;
+  }
+
+  .carousel-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 2px;
+    background: rgba(201,162,39,0.3);
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s;
+  }
+
+  .carousel-dot.active {
+    background: var(--secondary);
+    width: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-slide { flex: 0 0 calc(50% - 8px); height: 380px; }
+  }
+
+  @media (min-width: 1024px) {
+    .carousel-slide { flex: 0 0 calc(33.333% - 11px); height: 420px; }
+  }
+
+  /* ─── HOURS & LOCATION ─── */
+  #horaires {
+    background: #0E0E0E;
+    padding: 80px 20px;
+  }
+
+  .hours-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hours-table-wrap { }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(245,240,230,0.07);
+  }
+
+  .hours-table tr:last-child { border-bottom: none; }
+
+  .hours-table td {
+    padding: 12px 0;
+    font-size: 0.9rem;
+    color: rgba(245,240,230,0.75);
+  }
+
+  .hours-table td:first-child {
+    font-weight: 600;
+    color: var(--text);
+    width: 140px;
+    font-family: var(--font-body);
+    letter-spacing: 0.05em;
+  }
+
+  .hours-table td:last-child {
+    color: var(--secondary);
+    font-weight: 500;
+  }
+
+  .hours-info {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hours-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: rgba(245,240,230,0.7);
+  }
+
+  .hours-info-item .icon {
+    color: var(--secondary);
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .map-wrap {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+  }
+
+  .map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(80%) contrast(1.1) brightness(0.85);
+  }
+
+  @media (min-width: 768px) {
+    .hours-inner { grid-template-columns: 1fr 1fr; }
+    .map-wrap { height: 100%; min-height: 360px; }
+  }
+
+  /* ─── CONTACT FORM ─── */
+  #contact {
+    background: var(--background);
+    padding: 80px 20px;
+  }
+
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-info { }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 20px;
+    font-size: 0.92rem;
+    color: rgba(245,240,230,0.72);
+  }
+
+  .contact-detail .icon {
+    color: var(--secondary);
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .contact-detail a { color: var(--secondary); transition: opacity 0.3s; }
+  .contact-detail a:hover { opacity: 0.75; }
+
+  .contact-form-wrap { }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+  .form-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245,240,230,0.55);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background: #1a1a1a;
+    border: 1px solid rgba(245,240,230,0.1);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    transition: border-color 0.3s;
+    outline: none;
+    resize: vertical;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--secondary);
+  }
+
+  .form-group textarea { min-height: 130px; }
+
+  form .cta { align-self: flex-start; margin-top: 8px; }
+
+  @media (min-width: 768px) {
+    .contact-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ─── TRUST SIGNALS ─── */
+  #trust {
+    background: #0E0E0E;
+    padding: 80px 20px;
+    border-top: 1px solid rgba(201,162,39,0.15);
+  }
+
+  .trust-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .trust-header { margin-bottom: 48px; }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .trust-item {
+    background: #1a1a1a;
+    padding: 28px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: background 0.3s;
+  }
+
+  .trust-item:hover { background: #202020; }
+
+  .trust-icon {
+    color: var(--secondary);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .trust-text { }
+
+  .trust-title {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .trust-desc {
+    font-size: 0.82rem;
+    color: rgba(245,240,230,0.5);
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .trust-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .trust-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #080808;
+    padding: 56px 20px 32px;
+    border-top: 1px solid rgba(201,162,39,0.2);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand { }
+
+  .footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: var(--secondary);
+    margin-bottom: 16px;
+  }
+
+  .footer-tagline {
+    font-size: 0.85rem;
+    color: rgba(245,240,230,0.45);
+    line-height: 1.7;
+    max-width: 280px;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .footer-col ul li a {
+    font-size: 0.85rem;
+    color: rgba(245,240,230,0.55);
+    transition: color 0.3s;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-col ul li a:hover { color: var(--secondary); }
+
+  .footer-col p {
+    font-size: 0.85rem;
+    color: rgba(245,240,230,0.55);
+    line-height: 1.8;
+  }
+
+  .footer-col a {
+    color: rgba(245,240,230,0.55);
+    transition: color 0.3s;
+  }
+
+  .footer-col a:hover { color: var(--secondary); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(245,240,230,0.07);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: rgba(245,240,230,0.3);
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: 768px) {
+    .footer-top { grid-template-columns: 1.5fr 1fr 1fr; }
+    .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; }
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--background); }
+  ::-webkit-scrollbar-thumb { background: rgba(201,162,39,0.4); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
+
+  /* ─── UTILITY ─── */
+  .container { max-width: 1100px; margin: 0 auto; }
+  .text-gold { color: var(--secondary); }
+  .mt-8 { margin-top: 8px; }
+  .mt-16 { margin-top: 16px; }
+  .mt-24 { margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav aria-label="Main navigation">
+  <a href="#hero" class="nav-logo" aria-label="HAIRMECHANIXX home">HAIR<span>MECHANIXX</span></a>
+  <ul id="nav-menu" role="menubar">
+    <li role="none"><a href="#about" role="menuitem">About</a></li>
+    <li role="none"><a href="#services" role="menuitem">Services</a></li>
+    <li role="none"><a href="#avis" role="menuitem">Reviews</a></li>
+    <li role="none"><a href="#galerie" role="menuitem">Gallery</a></li>
+    <li role="none"><a href="#horaires" role="menuitem">Hours</a></li>
+    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+  </ul>
+  <div class="nav-cta-wrap">
+    <a href="tel:+917400135555" class="cta" aria-label="Call HAIRMECHANIXX">Book Your Cut</a>
+    <button class="burger" id="burger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero" aria-label="Hero section">
+  <div class="hero-bg">
+    <img src="assets/hero.jpg" alt="HAIRMECHANIXX barber shop interior with dramatic lighting in Lodi Colony, New Delhi">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <span class="hero-eyebrow">Barber Shop · Lodi Colony, New Delhi</span>
+    <h1 class="hero-heading">HAIR<br>MECHANIXX</h1>
+    <p class="hero-subheading">Sharp Cuts. Clean Fades. No Compromise.</p>
+    <div class="hero-rating">
+      <span class="hero-stars" aria-label="5 stars">★★★★★</span>
+      <span class="hero-rating-text">5.0 · 49 Google Reviews</span>
+    </div>
+    <p class="hero-text">Find us at Shop No. 31, Meharchand Market, Lodi Colony, New Delhi, Delhi 110003. Walk in or call ahead — the chair is ready.</p>
+    <div class="hero-btns">
+      <a href="tel:+917400135555" class="cta" aria-label="Call to book your cut">Book Your Cut</a>
+      <a href="#horaires" class="cta-outline" aria-label="Walk in today — view hours">Walk In Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about" aria-label="About HAIRMECHANIXX">
+  <div class="about-inner container">
+    <div class="about-image-wrap corner-frame fade-in">
+      <img src="assets/gallery-1.jpg" alt="Inside HAIRMECHANIXX barber shop at Meharchand Market, Lodi Colony">
+    </div>
+    <div class="about-text-wrap fade-in">
+      <span class="section-label">Who We Are</span>
+      <div class="gold-line"></div>
+      <h2 class="section-heading">About HAIRMECHANIXX</h2>
+      <p class="section-text">HAIRMECHANIXX is a barber shop in Lodi Colony, New Delhi. We hold a 5.0 rating across 49 reviews. You'll find us at Shop No. 31, Meharchand Market, Lodi Colony, New Delhi, Delhi 110003. Walk in, sit down, walk out sharp.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-number">5.0</span>
+          <span class="stat-label">Google Rating</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">49</span>
+          <span class="stat-label">Reviews</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">7</span>
+          <span class="stat-label">Days a Week</span>
+        </div>
+      </div>
+      <div style="margin-top:32px;">
+        <a href="tel:+917400135555" class="cta" aria-label="Call HAIRMECHANIXX to book your cut">Book Your Cut</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURED MENU / SERVICES ─── -->
+<section id="services" aria-label="Services at HAIRMECHANIXX">
+  <div class="services-inner">
+    <div class="services-header fade-in">
+      <span class="section-label">What We Do</span>
+      <div class="gold-line"></div>
+      <h2 class="section-heading">The Chair Is Waiting</h2>
+      <p class="section-text">Our services are built around the cut — barbering done right, every visit. For current services and pricing, call us at <a href="tel:+917400135555" style="color:var(--secondary);">+91 74001 35555</a>.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <span class="service-icon">✂</span>
+        <h3 class="service-title">Precision Fades</h3>
+        <p class="service-desc">Skin fades, taper fades, and drop fades executed with surgical precision. Every line is intentional, every blend is seamless.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🪒</span>
+        <h3 class="service-title">Beard Sculpting</h3>
+        <p class="service-desc">Shape, define, and refine your beard with expert hands. From sharp lines to full sculpted styles, your beard gets the attention it deserves.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🔥</span>
+        <h3 class="service-title">Hot Towel Shaves</h3>
+        <p class="service-desc">A classic straight-razor shave with a hot towel prep. Smooth, close, and deeply relaxing — the way a shave should feel.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">💈</span>
+        <h3 class="service-title">Modern & Classic Cuts</h3>
+        <p class="service-desc">Whether you want a timeless gentleman's cut or the latest urban style, our barbers deliver with confidence and craft.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🧴</span>
+        <h3 class="service-title">Grooming for Men</h3>
+        <p class="service-desc">Professional-grade products and grooming treatments to keep you looking sharp between visits. Your appearance is our reputation.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🚶</span>
+        <h3 class="service-title">Walk-In Friendly</h3>
+        <p class="service-desc">No appointment needed. Walk in any day from 10 AM to 8 PM and take a seat. We'll have you looking fresh before you know it.</p>
+      </div>
+    </div>
+    <div class="services-cta fade-in">
+      <a href="tel:+917400135555" class="cta" aria-label="Call HAIRMECHANIXX for services and pricing">Call +91 74001 35555</a>
+      <p class="services-note">Open daily 10:00 AM – 8:00 PM · Walk-ins always welcome.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CUSTOMER REVIEWS ─── -->
+<section id="avis" aria-label="Customer reviews for HAIRMECHANIXX">
+  <div class="reviews-inner">
+    <div class="reviews-header fade-in">
+      <span class="section-label">Client Feedback</span>
+      <div class="gold-line"></div>
+      <h2 class="section-heading">What Clients Say</h2>
+      <p class="section-text">Rated 5.0 from 49 reviews on Google.</p>
+      <div class="reviews-aggregate">
+        <div class="agg-score" aria-label="Rating: 5.0 out of 5">5.0</div>
+        <div class="agg-details">
+          <div class="agg-stars" aria-label="5 stars">★★★★★</div>
+          <div class="agg-count">49 reviews on Google</div>
+          <div class="agg-count" style="color:var(--secondary);font-weight:600;">Perfect Score</div>
+        </div>
+      </div>
+    </div>
+    <div class="no-reviews-note fade-in">
+      <p><strong>5.0 · 49 Google Reviews</strong></p>
+      <p style="margin-top:12px;">HAIRMECHANIXX holds a perfect 5.0 rating across 49 verified Google reviews. Come in and experience the standard that keeps clients coming back. Shop No. 31, Meharchand Market, Lodi Colony, New Delhi, Delhi 110003.</p>
+      <div style="margin-top:20px;">
+        <a href="tel:+917400135555" class="cta" aria-label="Book your cut at HAIRMECHANIXX">Book Your Cut</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY PREVIEW ─── -->
+<section id="galerie" aria-label="Gallery of HAIRMECHANIXX barber shop">
+  <div class="gallery-inner">
+    <div class="gallery-header fade-in">
+      <span class="section-label">Inside the Shop</span>
+      <div class="gold-line"></div>
+      <h2 class="section-heading">A Look at HAIRMECHANIXX</h2>
+      <p class="section-text">Shop No. 31, Meharchand Market, Lodi Colony, New Delhi — where every cut is a statement.</p>
+    </div>
+    <div class="carousel-wrap fade-in" aria-label="Gallery carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide corner-frame">
+          <img src="assets/hero.jpg" alt="HAIRMECHANIXX barber shop atmosphere with dramatic gold rim lighting">
+        </div>
+        <div class="carousel-slide corner-frame">
+          <img src="assets/gallery-1.jpg" alt="Precision fade and beard sculpting at HAIRMECHANIXX, Lodi Colony">
+        </div>
+        <div class="carousel-slide corner-frame">
+          <img src="assets/gallery-2.jpg" alt="Clean barbershop interior at HAIRMECHANIXX, Meharchand Market">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls" aria-label="Carousel controls">
+      <button class="carousel-btn" id="prevBtn" aria-label="Previous slide">&#8592;</button>
+      <button class="carousel-btn" id="nextBtn" aria-label="Next slide">&#8594;</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots" aria-label="Carousel position indicators">
+      <div class="carousel-dot active" data-index="0"></div>
+      <div class="carousel-dot" data-index="1"></div>
+      <div class="carousel-dot" data-index="2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOURS & LOCATION ─── -->
+<section id="horaires" aria-label="Hours and location of HAIRMECHANIXX">
+  <div class="hours-inner container">
+    <div class="hours-table-wrap fade-in">
+      <span class="section-label">Find Us</span>
+      <div class="gold-line"></div>
+      <h2 class="section-heading">Hours & Location</h2>
+      <p class="section-text">Open every day, 10:00 AM to 8:00 PM. Walk in or call ahead.</p>
+      <table class="hours-table" aria-label="Opening hours">
+        <tbody>
+          <tr><td>Monday</td><td>10:00 AM – 8:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>10:00 AM – 8:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>10:00 AM – 8:00 PM</td></tr>
+          <tr><td>Thursday</td><td>10:00 AM – 8:00 PM</td></tr>
+          <tr><td>Friday</td><td>10:00 AM – 8:00 PM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM – 8:00 PM</td></tr>
+          <tr><td>Sunday</td><td>10:00 AM – 8:00 PM</td></tr>
+        </tbody>
+      </table>
+      <div class="hours-info">
+        <div class="hours-info-item">
+          <span class="icon">📍</span>
+          <span>Shop No. 31, Meharchand Market, Lodi Colony, New Delhi, Delhi, 110003, India</span>
+        </div>
+        <div class="hours-info-item">
+          <span class="icon">📞</span>
+          <span><a href="tel:+917400135555" style="color:var(--secondary);">+91 74001 35555</a></span>
+        </div>
+        <div class="hours-info-item">
+          <span class="icon">✉</span>
+          <span><a href="mailto:info@hairmechanixx.com" style="color:var(--secondary);">info@hairmechanixx.com</a></span>
+        </div>
+      </div>
+      <div style="margin-top:28px;">
+        <a href="tel:+917400135555" class="cta" aria-label="Call HAIRMECHANIXX">Book Your Cut</a>
+      </div>
+    </div>
+    <div class="map-wrap fade-in">
+      <iframe
+        src="https://www.google.com/maps?q=28.5921,77.2194&z=16&output=embed"
+        title="HAIRMECHANIXX location map — Shop No. 31, Meharchand Market, Lodi Colony, New Delhi"
+        loading="lazy"
+        allowfullscreen
+        aria-label="Google Maps showing HAIRMECHANIXX location in Lodi Colony, New Delhi">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT FORM ─── -->
+<section id="contact" aria-label="Contact HAIRMECHANIXX">
+  <div class="contact-inner container">
+    <div class="contact-info fade-in">
+      <span class="section-label">Reach Out</span>
+      <div class="gold-line"></div>
+      <h2 class="section-heading">Get in Touch</h2>
+      <p class="section-text">Questions, bookings, or just want to check the wait? Call us at +91 74001 35555 or email info@hairmechanixx.com.</p>
+      <div class="contact-detail">
+        <span class="icon">📍</span>
+        <span>Shop No. 31, Meharchand Market, Lodi Colony, New Delhi, Delhi, 110003, India</span>
+      </div>
+      <div class="contact-detail">
+        <span class="icon">📞</span>
+        <span><a href="tel:+917400135555">+91 74001 35555</a></span>
+      </div>
+      <div class="contact-detail">
+        <span class="icon">✉</span>
+        <span><a href="mailto:info@hairmechanixx.com">info@hairmechanixx.com</a></span>
+      </div>
+      <div class="contact-detail">
+        <span class="icon">🕐</span>
+        <span>Open daily 10:00 AM – 8:00 PM</span>
+      </div>
+    </div>
+    <div class="contact-form-wrap fade-in">
+      <form action="https://checkout.kamkod.com/contact" method="POST" aria-label="Contact form for HAIRMECHANIXX">
+        <input type="hidden" name="lead_id" value="ChIJee8LesjjDDkRkErrqC9c9FM">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Smith" required aria-label="Your name" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required aria-label="Your email address" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Ask about wait times, services, or anything else." required aria-label="Your message"></textarea>
+        </div>
+        <button type="submit" class="cta" aria-label="Send your message to HAIRMECHANIXX">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TRUST SIGNALS ─── -->
+<section id="trust" aria-label="Why choose HAIRMECHANIXX">
+  <div class="trust-inner">
+    <div class="trust-header fade-in">
+      <span class="section-label">Our Standards</span>
+      <div class="gold-line"></div>
+      <h2 class="section-heading">Why HAIRMECHANIXX</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item fade-in">
+        <span class="trust-icon">⭐</span>
+        <div class="trust-text">
+          <div class="trust-title">5.0 on Google</div>
+          <div class="trust-desc">A perfect rating across 49 verified reviews.</div>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">🚶</span>
+        <div class="trust-text">
+          <div class="trust-title">Walk-Ins Welcome</div>
+          <div class="trust-desc">No appointment needed — just walk in any day.</div>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">✂</span>
+        <div class="trust-text">
+          <div class="trust-title">Experienced Barbers</div>
+          <div class="trust-desc">Skilled hands behind every cut, fade, and shave.</div>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">🧴</span>
+        <div class="trust-text">
+          <div class="trust-title">Pro-Grade Products</div>
+          <div class="trust-desc">Professional-grade products used on every client.</div>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">💳</span>
+        <div class="trust-text">
+          <div class="trust-title">Card Payments</div>
+          <div class="trust-desc">Card payments accepted for your convenience.</div>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">🧼</span>
+        <div class="trust-text">
+          <div class="trust-title">Clean & Sanitized</div>
+          <div class="trust-desc">Tools cleaned and sanitized between every client.</div>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">🅿</span>
+        <div class="trust-text">
+          <div class="trust-title">Easy Parking</div>
+          <div class="trust-desc">Convenient parking nearby at Meharchand Market.</div>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">📅</span>
+        <div class="trust-text">
+          <div class="trust-title">Open 7 Days</div>
+          <div class="trust-desc">Open every day 10:00 AM – 8:00 PM, no exceptions.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer aria-label="HAIRMECHANIXX footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">HAIRMECHANIXX</div>
+        <p class="footer-tagline">Barber shop in Lodi Colony, New Delhi. Sharp cuts, clean fades, no compromise. Open daily 10:00 AM – 8:00 PM.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#avis">Reviews</a></li>
+          <li><a href="#galerie">Gallery</a></li>
+          <li><a href="#horaires">Hours</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          Shop No. 31, Meharchand Market,<br>
+          Lodi Colony, New Delhi,<br>
+          Delhi, 110003, India.<br><br>
+          <a href="tel:+917400135555">+91 74001 35555</a><br>
+          <a href="mailto:info@hairmechanixx.com">info@hairmechanixx.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 HAIRMECHANIXX. All rights reserved. Barber shop in Lodi Colony, New Delhi.</p>
+      <p class="footer-copy">Open daily 10:00 AM – 8:00 PM.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ─── BURGER MENU ───
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burger.addEventListener('click', function() {
+    const isOpen = navMenu.classList.toggle('open');
+    burger.classList.toggle('active', isOpen);
+    burger.setAttribute('aria-expanded', isOpen.toString());
+  });
+
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      burger.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ─── FADE-IN INTERSECTION OBSERVER ───
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function(el) { observer.observe(el); });
+
+  // ─── CAROUSEL ───
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const slides = track.querySelectorAll('.carousel-slide');
+    let current = 0;
+    let slideWidth = 0;
+    let visibleCount = 1;
+
+    function getVisibleCount() {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 768) return 2;
+      return 1;
+    }
+
+    function getSlideWidth() {
+      const gap = 16;
+      const count = getVisibleCount();
+      return (track.parentElement.offsetWidth - gap * (count - 1)) / count;
+    }
+
+    function goTo(index) {
+      visibleCount = getVisibleCount();
+      slideWidth = getSlideWidth();
+      const maxIndex = Math.max(0, slides.length - visibleCount);
+      current = Math.max(0, Math.min(index, maxIndex));
+      const offset = current * (slideWidth + 16);
+      track.style.transform = 'translateX(-' + offset + 'px)';
+      dots.forEach(function(dot, i) {
+        dot.classList.toggle('active', i === current);
+      });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', function() {
+      goTo(current - 1);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', function() {
+      goTo(current + 1);
+    });
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        goTo(parseInt(dot.getAttribute('data-index')));
+      });
+    });
+
+    window.addEventListener('resize', function() { goTo(current); });
+
+    goTo(0);
+
+    // Auto-advance
+    setInterval(function() {
+      visibleCount = getVisibleCount();
+      const maxIndex = Math.max(0, slides.length - visibleCount);
+      goTo(current >= maxIndex ? 0 : current + 1);
+    }, 4000);
+  })();
+
+  // ─── NAV SCROLL EFFECT ───
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 60) {
+      nav.style.background = 'rgba(8,8,8,0.98)';
+    } else {
+      nav.style.background = 'rgba(14,14,14,0.92)';
+    }
+  });
+</script>
+<!-- KAMKOD:DEMO_START -->
+<script>
+(function(){
+  var URL = 'https://checkout.kamkod.com/?lead=ChIJee8LesjjDDkRkErrqC9c9FM';
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;               /* formulaire -> endpoint contact */
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;           /* navigation interne de la démo */
+    var a = e.target.closest('a');
+    if(!a) return;                                      /* bouton seul hors nav: on laisse */
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;                  /* ancres de section */
+    if(/^https?:|^\/\//i.test(href)) return;          /* lien externe réel */
+    e.preventDefault(); window.location.href = URL;     /* tel:, mailto:, javascript:… */
+  }, true);
+})();
+</script>
+<div id="kamkod-demo-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  This is a preview of your future website — <a href="https://checkout.kamkod.com/?lead=ChIJee8LesjjDDkRkErrqC9c9FM" style="color:#FFD700;font-weight:600;">activate it now</a>
+</div>
+<!-- KAMKOD:DEMO_END -->
+</body>
+</html>
