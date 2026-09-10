@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#121212"/><stop offset="1" stop-color="#C9A227"/></linearGradient></defs>
+<rect width="1536" height="1024" fill="url(#g)"/>
+<circle cx="1200" cy="180" r="260" fill="#0E0E0E" opacity="0.25"/>
+<circle cx="220" cy="880" r="200" fill="#0E0E0E" opacity="0.18"/>
+<rect x="0" y="760" width="1536" height="264" fill="#0E0E0E" opacity="0.85"/>
+<text x="768" y="480" font-family="Georgia,serif" font-size="56" fill="#121212" text-anchor="middle">HAIRMECHANIXX — intérieur d'un barber shop à New Delhi, </text>
+<text x="768" y="700" font-family="Arial,sans-serif" font-size="28" fill="#121212" opacity="0.9" text-anchor="middle" xml:space="preserve">Photographie photo réaliste de commerce local, prise sur le vif, sans mise en scène d'un commerce local: intérieur d'un …</text>
+</svg>
